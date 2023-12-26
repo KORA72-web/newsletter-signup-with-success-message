@@ -1,0 +1,270 @@
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root{
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+  --tomato-start:  hsl(4, 100%, 67%);
+  --tomato-end:hsl(0, 100%, 61%);
+  --tomato-start-hover:  hsla(4, 100%, 67%, 0.478);
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+*,*::after,*::before{
+  box-sizing: border-box;
+}
+
+body
+{
+background-color: var(--charcoal-grey);
+font-family:'Roboto',sans-serif;
+color: var(--dark-slate-grey);
+}
+.container{
+  box-sizing: border-box;
+  background-color: var(--white);
+  width:100%;
+  padding: 2rem;
+  max-width: 850px;
+  height: 600px;
+  border-radius: 15px;
+  position: absolute; 
+  left: 20rem;
+  top: 15%;
+}
+/* Container Description and Email Input Field  */
+.container .container_content{
+  display: flex;
+  flex-direction: row-reverse;
+ 
+}
+.container .container_content .container_desc{
+  margin: 2rem;
+  width: 80%;
+    }
+    .container .container_content .container_desc h1,
+    .container .container_content .container_desc p,
+    .container .container_content .container_desc ul,
+    .container .container_content .container_desc ul li{
+      margin-top:1rem;
+    }
+    .container .container_content .container_desc  .email_field{
+      margin-top:2.5rem;
+    }
+    .container .container_content .container_desc  .email_field input{
+      width: 100%;
+      height: 50px;
+      border-radius: 12px;
+      outline: none;
+      border: 1px solid var(--charcoal-grey);
+      padding-left: 2rem;
+  font-size: 16px;
+  
+    }
+    .container .container_content .container_desc  .email_field input[type="submit"]{
+      margin-top:1.6rem;
+      color: var(--white);
+      background-color: var(--dark-slate-grey);
+      font-size: 16px;
+      font-weight: 700;
+      padding-left: 0;
+      padding-top: 0.3rem;
+      cursor:pointer;
+      border: none;
+    }
+    .container .container_content .container_desc  .email_field input[type="submit"]:hover{
+      background: linear-gradient(to left,var(--tomato-start),var(--tomato-end));
+      filter: drop-shadow(10px 10px 10px  var(--tomato-start-hover));
+    }
+    .container .container_content .container_desc ul li{
+      list-style-type:none;
+    }
+   
+ 
+.container .container_content .container_desc  .email_field p{
+  font-weight: 700;
+}
+/* svg container */
+.container .container_content .svg_container{
+  position: relative;
+  width:80%;
+  margin-top: -2rem;
+}
+.svg_container svg{
+  width:100%;
+  top: 0;
+}
+#error{
+  float: right;
+  color: var(--tomato-start);
+  font-weight: 200;
+}
+/* Success message  */
+#popup{
+  display: none;
+  margin-top: 10%;
+  margin-left: 40%;
+  background-color: var(--white);
+  width: 100%;
+  max-width:400px;
+  height: 400px;
+  padding: 3rem 2rem;
+  border-radius: 15px;
+}
+
+.popup svg{
+  height: 50px;
+  width: 50px;
+}
+.popup p .emailName{
+  font-weight:700;
+}
+.popup input[type="button"]{
+  margin-top:1.6rem;
+  color: var(--white);
+  background-color: var(--dark-slate-grey);
+  font-size: 16px;
+  font-weight: 700;
+  padding-left: 0;
+  padding-top: 0.3rem;
+  width: 100%;
+  height: 50px;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  cursor:pointer;
+}
+.popup input[type="button"]:hover{
+   background: linear-gradient(to left,var(--tomato-start),var(--tomato-end));
+   filter: drop-shadow(10px 10px 10px  var(--tomato-start-hover));
+}
+.popup h1,
+.popup p{
+margin-top: 1rem;
+}
+@media screen and (max-width:1440px){
+  
+    .container{
+      box-sizing: border-box;
+      background-color: var(--white);
+      width:100%;
+      padding: 2rem;
+      max-width: 850px;
+      height: 600px;
+      border-radius: 15px;
+      left:0;
+      top: 15%;
+    }
+}
+@media screen and (max-width:376px){
+  .container{
+    box-sizing: border-box;
+    background-color: var(--white);
+    width:100%;
+    padding: unset;
+    max-width: unset;
+    height: 800px;
+    position: absolute; 
+    left: 0;
+    top: 0;
+  }
+  .container .container_content{
+    display: block;
+  }
+  .container .container_content .container_desc{
+margin: 2rem;
+  }
+  .container .container_content .container_desc h1,
+  .container .container_content .container_desc p,
+  .container .container_content .container_desc ul,
+  .container .container_content .container_desc ul li{
+    margin-top:1rem;
+  }
+  .container .container_content .container_desc  .email_field{
+    margin-top:2.5rem;
+  }
+  .container .container_content .container_desc  .email_field input{
+    width: 100%;
+    height: 50px;
+    border-radius: 12px;
+    outline: none;
+    border: 1px solid var(--charcoal-grey);
+    padding-left: 2rem;
+font-size: 16px;
+
+  }
+  .container .container_content .container_desc  .email_field input[type="submit"]{
+    margin-top:1.6rem;
+    color: var(--white);
+    background-color: var(--dark-slate-grey);
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 0;
+    padding-top: 0.3rem;
+  }
+  .container .container_content .container_desc ul li{
+    list-style-type:none;
+  }
+  .container .container_content .svg_container{
+    position: relative;
+    width:100%;
+  }
+  .svg_container svg{
+    width:100%;
+    top: 0;
+  }
+  /* Success message */
+  #popup{
+    display: none;
+    top: 0;
+    left: 0;
+    background-color: var(--white);
+    width: 100%;
+    height: 100vh;
+    padding: 7rem 2rem   ;
+    border-radius: unset;
+    margin: unset;
+    margin-top: unset;
+  }
+  .popup svg{
+    height: 50px;
+    width: 50px;
+  }
+  .popup p .emailName{
+    font-weight:700;
+  }
+ .popup input[type="button"]{
+    margin-top:1.6rem;
+    color: var(--white);
+    background-color: var(--dark-slate-grey);
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 0;
+    padding-top: 0.3rem;
+    width: 100%;
+    height: 50px;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+  }
+  .popup h1,
+  .popup p{
+margin-top: 2rem;
+  }
+  }
+  
+  .attribution {
+    display: none; margin-top: 11px; bottom: 0;top:100%} 
+    #popup{
+      top: 10%;
+      left: 0;
+    }
+
+  
+
+  
+
+/* .attribution {position: absolute; font-size: 11px; bottom: 0;}
+.attribution a { color: hsl(228, 45%, 44%); } */
